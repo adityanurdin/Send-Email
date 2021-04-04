@@ -51,7 +51,7 @@ class EmailController extends Controller
         Mail::to($data['email'])->send($mail);
 
         $mail2 = new SendMail($send);
-        Mail::to('tolong@fajar.litecloud.id')->send($mail2);
+        Mail::to(\env('MAIL_USERNAME'))->send($mail2);
 
         return back()->with('success','Thanks for contacting us!');
     }

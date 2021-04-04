@@ -30,7 +30,9 @@ class ConfirmasiMail extends Mailable
      */
     public function build()
     {
-       return $this->from('tolong@fajar.litecloud.id')->subject('Konfirmasi Penawaran GINUMERIK')->view('emails.template_konfirmasi_email')
+       return $this->from(\env('MAIL_FROM_ADDRESS'))
+                    ->subject('Konfirmasi Penawaran GINUMERIK')
+                    ->view('emails.template_konfirmasi_email')
                    ->with('data', $this->data);
     }
 }
