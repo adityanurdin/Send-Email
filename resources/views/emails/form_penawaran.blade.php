@@ -8,11 +8,19 @@
         <div class="container mt-5">
             <div class="row">
                 <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-7 offset-xl-3">
-                    <div class="login-brand">
-                        FORM PENAWARAN GINUMERIK
+                    <div class="login-brand text-dark">
+                        <div class="row mb-5">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <img src="https://ginumerik.com/wp-content/uploads/2021/02/LOGO-GIN-2020.png" alt="" width="35%">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <img src="https://ginumerik.com/wp-content/uploads/2021/02/icon_right.png" alt="" width="55%">
+                            </div>
+                        </div>
+                        <span style="font-weight: 500;">FORM PENAWARAN GINUMERIK</span>
                     </div>
 
-                    <div class="card card-primary">
+                    <div class="card card-success">
                         <div class="card-body">
 
                             @if(count($errors) > 0)
@@ -49,27 +57,27 @@
                                 <div class="control-group after-add-more">
                                     <div class="form-group">
                                         <label>Nama Perusahaan</label>
-                                        <input type="text" class="form-control" name="nama_perusahaan">
+                                        <input type="text" class="form-control" name="nama_perusahaan" autocomplete="off">
                                     </div>
 
                                     <div class="form-group">
                                         <label>Alamat Perusahaan</label>
-                                        <input type="text" class="form-control" name="alamat_perusahaan">
+                                        <input type="text" class="form-control" name="alamat_perusahaan" autocomplete="off">
                                     </div>
 
                                     <div class="form-group">
                                         <label>PIC (Person in Change)</label>
-                                        <input type="text" class="form-control" name="pic">
+                                        <input type="text" class="form-control" name="pic" autocomplete="off">
                                     </div>
 
                                     <div class="form-group">
                                         <label>Email address</label>
-                                        <input type="email" class="form-control" name="email">
+                                        <input type="email" class="form-control" name="email" autocomplete="off">
                                     </div>
                                     
                                     <div class="form-group">
                                         <label>No Telephone</label>
-                                        <input type="text" class="form-control" name="no_telephone">
+                                        <input type="number" class="form-control" name="no_telephone" autocomplete="off">
                                     </div>
 
                                     <div class="form-group">
@@ -94,7 +102,7 @@
                                             </div>
 
                                             <div class="col-md-2">
-                                                <button class="btn btn-success add-more btn-sm" type="button">
+                                                <button class="btn btn-success add-more" type="button">
                                                     <i class="fa fa-plus"></i> Add
                                                 </button>
                                             </div>
@@ -103,7 +111,7 @@
                             
                                 </div>
                                 
-                                <button type="submit" name="send" class="btn btn-icon icon-left btn-outline-primary float-right mt-2"><i class="fa fa-paper-plane"></i> Kirim Email</button>
+                                <button type="submit" name="send" class="btn btn-icon icon-left btn-success float-right mt-2"><i class="fa fa-paper-plane"></i> Kirim Penawaran</button>
                             </form>
 
                             <!-- class invisible membuat form disembunyikan  -->

@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
 
+    <!-- icon -->
+  <link rel="shortcut icon" href="https://ginumerik.com/wp-content/uploads/2021/02/LOGO-GIN-2020.png" type="image/x-icon">
+
     <!-- General CSS Files -->
   <link rel="stylesheet" href="{{asset('assets/bootstrap/css/bootstrap.min.css')}}">
   {{-- <link rel="stylesheet" href="{{asset('assets/fontawesome/all.css')}}"> --}}
@@ -17,8 +20,8 @@
 </head>
 <body>
     
-    <div id="app">
-        @yield('content')
+  <div id="app">
+      @yield('content')
     </div>
 
 
