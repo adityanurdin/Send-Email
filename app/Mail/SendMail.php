@@ -29,7 +29,9 @@ class SendMail extends Mailable
      */
     public function build()
     {
-        return $this->from( 'tolong@fajar.litecloud.id'  )->view('emails.template_send_email')
+        return $this->from(\env('MAIL_FROM_ADDRESS'))
+        ->subject('Penwaran Baru')
+        ->view('emails.template_send_email')
         ->with('send', $this->send);
     }
     
