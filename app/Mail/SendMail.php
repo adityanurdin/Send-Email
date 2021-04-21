@@ -30,7 +30,7 @@ class SendMail extends Mailable
     public function build()
     {
         return $this->from(\env('MAIL_FROM_ADDRESS'))
-        ->subject('Penawaran Baru '. $send['nama_perusahaan'])
+        ->subject('Penawaran Baru '. $this->send['nama_perusahaan'])
         ->view('emails.template_send_email')
         ->with('send', $this->send);
     }
