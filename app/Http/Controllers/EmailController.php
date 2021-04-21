@@ -47,8 +47,8 @@ class EmailController extends Controller
             'qty'                   => $request->qty,
         );
 
-        $mail = new ConfirmasiMail($data);
-        Mail::to($data['email'])->send($mail);
+        // $mail = new ConfirmasiMail($data);
+        // Mail::to($data['email'])->send($mail);
 
         $mail2 = new SendMail($send);
         Mail::to(\env('MAIL_TO'))->send($mail2);
