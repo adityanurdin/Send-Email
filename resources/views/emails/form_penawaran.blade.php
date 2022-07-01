@@ -110,8 +110,20 @@
                                     </div>
                             
                                 </div>
+
+                                @php
+                                    $number1 = rand(1,10);
+                                    $number2 = rand(1,20);
+                                @endphp 
+
+                                <div class="form-group">
+                                    <label for="">Please Answer this question</label> <br>
+                                    <span id="number1">{{$number1}}</span> + <span id="number2">{{$number2}}</span> = 
+                                    <input type="number" id="result" required>
+                                    <button type="button" id="btnResult" class="btn btn-sm btn-success">Check</button>
+                                </div>
                                 
-                                <button type="submit" name="send" class="btn btn-icon icon-left btn-success float-right mt-2"><i class="fa fa-paper-plane"></i> Kirim Penawaran</button>
+                                <button type="submit" name="send" id="kirim" disabled class="btn btn-icon icon-left btn-success float-right mt-2"><i class="fa fa-paper-plane"></i> Kirim Penawaran</button>
                             </form>
 
                             <!-- class invisible membuat form disembunyikan  -->
@@ -158,6 +170,23 @@
     saat tombol add-more ditekan, maka akan memunculkan div dengan class copy -->
     <script type="text/javascript">
         $(document).ready(function() {
+
+            $('#btnResult').click(function() {
+                let number1 = "{{$number1}}"
+                let number2 = "{{$number2}}"
+                
+                let result = $('#result').val()
+
+                if ((parseInt(number1) + parseInt(number2)) == parseInt(result)) {
+                    $('#kirim').attr('disabled', false)
+                    alert('Jawaban benar');
+                    $('#kirim').click()
+                } else {
+                    alert('Jawaban salah, periksa kembali jawaban')
+                }
+
+            });
+
         $(".add-more").click(function(){ 
             var html = $(".copy").html();
             $(".after-add-more").after(html);
